@@ -1,0 +1,104 @@
+
+/*
+ * Typography
+ */
+
+h2 {
+    margin-bottom: 20px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #000;
+}
+
+canvas {
+    width: 100% !important;
+    max-width: 800px;
+    width: auto !important;
+}
+
+
+
+/*
+ * Dashboard
+ */
+
+/* Placeholders */
+.placeholders {
+    padding-bottom: 3rem;
+}
+
+.placeholder img {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Nav */
+nav .nav-item {
+  flex: 0 0 33.33%;
+  text-align: center;
+}
+
+nav .nav-item a {
+  color: #757575;
+  border: 1px solid #757575;
+  font-size: 90%;
+  transition: all 500ms ease;
+}
+
+nav .nav-item a:hover {
+  color: #b4d475;
+  border: 1px solid #b4d475;
+}
+
+nav .nav-item a.active {
+  background-color: #b4d475;
+  border-color: #b4d475;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  nav .nav {
+    display: block;
+  }
+  nav .nav-item {
+    display: block;
+    flex: 0 0 100%;
+  }
+}
+
+/* Form */
+.bg-faded-purple {
+  background-color: rgba(119, 39, 119, 0.15);
+}
+
+form#submit-calc * {
+  font-size: 90%;
+}
+
+form#submit-calc label {
+  font-size: 100%;
+}
+
+/* Image and Legend */
+.image-wrap {
+  align-self: center;
+}
+
+.image-wrap img {
+  width: 100%;
+}
+ul.image-legend {
+  padding: 0 0 0 15px;
+}
+
+@media (max-width: 767px) {
+  .image-wrap {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .image-wrap img {
+    max-width: 75%;
+  }
+  .image-wrap .image-legend {
+    text-align: left;
+  }
+}

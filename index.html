@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <div class="container-fluid">
+
+    <!-- Caclulator Navigation -->
+    <div class="row">
+      <nav class="col-md-12 my-3">
+        <ul class="nav" id="calcSelect">
+          <li class="nav-item py-1 px-2">
+            <a id="diffractionLink" class="nav-link active" href="#">Angle Calculator<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item py-1 px-2">
+            <a id="angularLink" class="nav-link" href="#">Angular Dispersion Calculator</a>
+          </li>
+          <li class="nav-item py-1 px-2">
+            <a id="pulseLink" class="nav-link" href="#">Pulse Dispersion Calculator</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Current Calulator Title -->
+    <div class="row bg-faded-purple px-3 pt-3">
+      <div class="col-md-12">
+        <h2 id="calcType">Angle Calculator</h1>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="row bg-faded-purple px-3 pb-3">
+      <div class="col-lg-12">
+        <form id="submit-calc">
+          <!-- Inputs -->
+          <div class="row">
+            <div class="form-group col-sm-6 col-md-6 col-lg-3">
+              <label for="lnmm">Grating frequency (lines/mm)</label>
+              <input type="number" class="form-control" id="lnmm" min= "0" aria-describedby="lnmmHelp" placeholder="Ex. 1740" required>
+            </div>
+            <div class="form-group col-sm-6 col-md-6 col-lg-3">
+              <label for="wavelength">Wavelength (nm)</label>
+              <input type="number" class="form-control" id="wavelength" min= "0" placeholder="Ex. 1053" required>
+            </div>
+            <div class="form-group col-sm-6 col-md-6 col-lg-3">
+              <label for="ordersSelectMax">Max diffraction order to plot</label>
+              <input type="number" class="form-control" placeholder="2" id="ordersSelectMax" required />
+            </div>
+            <div class="form-group col-sm-6 col-md-6 col-lg-3">
+              <label for="ordersSelectMin">Min diffraction order to plot</label>
+              <input type="number" class="form-control" placeholder="-2" id="ordersSelectMin" required/>
+            </div>
+          </div>
+          <!-- Buttons -->
+          <div class="row">
+            <div class="form-group col-sm-12 col-md-3 offset-md-6 col-lg-2 offset-lg-8">
+              <button id= "axisSetButton" class="btn btn-success btn-block" disabled>Set y range</button>
+            </div>
+            <div class="form-group col-sm-12 col-md-3 col-lg-2">
+              <button type="submit" class="btn btn-primary btn-block">Plot</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <main class="col-md-12 py-4">
+      <div class="row">
+
+        <!-- Chart -->
+        <div class="col-md-7">
+          <canvas id="myChart" width="100%" height="100%" class="user-select: none;"></canvas>
+        </div>
+
+        <!-- Image Legend -->
+        <div class="col-md-5 small d-flex">
+          <div class="image-wrap">
+            <img src="static/images/gratingFigure.png">
+            
+            <hr>
+
+            <ul class="image-legend">
+              <li>θ = angle of incidence (deg)</li>
+              <li>θm = angle of diffraction of the mth order (deg)</li>
+              <li>λ = wavelength of light (nm)</li>
+              <li>τ = pulse delay time (ps)</li>
+              <li>s = separation between two gratings used to compress a pulse (m)</li>
+              <li>dθm/dλ = angular dispersion, or change in angle of diffraction with wavelength (deg/nm)</li>
+              <li>(1/s)dτ/dλ = pulse dispersion, or change in pulse delay time with wavelength per meter of separation between two identical, parallel gratings (ps/nm per meter)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tether.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/Chart.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
