@@ -157,7 +157,7 @@ function drawDiffractionChart() {
         yAxes: [{
           scaleLabel: {
             display: true,
-            labelString: 'Angle of Diffraction, θᵐ (deg)'
+            labelString: 'Angle of Diffraction, θm (deg)'
           },
           ticks: {
             beginAtZero:true,
