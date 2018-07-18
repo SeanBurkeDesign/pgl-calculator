@@ -595,3 +595,10 @@ $('#angularLink').click(function () {
   drawAngularDispersionChart();
   func = 2;
 });
+
+$(window).keydown(function(event){
+  if(event.keyCode == 13) {
+    event.preventDefault();
+    return false;
+  }
+});
