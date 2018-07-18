@@ -485,7 +485,7 @@ function drawPulseDispersionChart() {
       },
       title: {
         display: true,
-        text: 'Pulse Dispersion vs. Angle of Incidence'
+        text: 'Temporal Dispersion vs. Angle of Incidence'
       },
       legend: {
         display: true,
@@ -513,8 +513,8 @@ $('#axisSetButton').click(function(ev){
   console.log(func);
 
   if (func == 1){
-    pulseHigh = validateInput(parseFloat(window.prompt("Enter new Pulse Dispersion Y High",pulseHigh)),pulseHigh);
-    pulseLow = validateInput(parseFloat(window.prompt("Enter new Pulse Dispersion Y Low",pulseLow)),pulseLow);
+    pulseHigh = validateInput(parseFloat(window.prompt("Enter new Temporal Dispersion Y High",pulseHigh)),pulseHigh);
+    pulseLow = validateInput(parseFloat(window.prompt("Enter new Temporal Dispersion Y Low",pulseLow)),pulseLow);
 
     while (pulseHigh <= pulseLow) {
       pulseLow = validateInput(parseFloat(window.prompt("Enter new Angular Dispersion Y High (must be less then "+pulseLow+")",pulseHigh)),pulseLow);
@@ -582,7 +582,7 @@ $('#pulseLink').click(function () {
   $('#calcSelect').children().children().removeClass('active');
   $(this).addClass('active');
   $('#axisSetButton').prop('disabled', false);
-  $('#calcType').text('Pulse Dispersion Calculator');
+  $('#calcType').text('Temporal Dispersion Calculator');
   drawPulseDispersionChart();
   func = 1;
 });
