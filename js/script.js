@@ -245,11 +245,11 @@ function drawAngularDispersionChart() {
 
         if (  n <= 0  && Math.sin(theta*Math.PI/180) + n * wavelength * lnMM * 1.0e-6 < n/Math.abs(n)) {
 
-          var calc = 1000*(n/Math.abs(n));
+          var calc = 1e10*(n/Math.abs(n));
 
         } else if ( n > 0 && Math.sin(theta*Math.PI/180) + n * wavelength * lnMM * 1.0e-6 > n/Math.abs(n) ) {
 
-            var calc = 1000*(n/Math.abs(n));
+            var calc = 1e10*(n/Math.abs(n));
 
         } else {
 
@@ -394,11 +394,11 @@ function drawPulseDispersionChart() {
 
         if (  n <= 0  && Math.sin(theta*Math.PI/180) + n * wavelength * lnMM * 1.0e-6 < n/Math.abs(n)) {
 
-          var calc = 1000*(n/Math.abs(n));
+          var calc = 1e10;
 
         } else if ( n > 0 && Math.sin(theta*Math.PI/180) + n * wavelength * lnMM * 1.0e-6 > n/Math.abs(n) ) {
 
-          var calc = 1000*(n/Math.abs(n));
+          var calc = 1e10;
               
         } else {
 
