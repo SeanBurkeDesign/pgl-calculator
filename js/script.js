@@ -159,7 +159,11 @@ function drawDiffractionChart() {
             display: true,
             labelString: 'Angle of Diffraction, θm (deg)'
           },
+          gridLines: {
+            drawTicks: false,
+          },
           ticks: {
+            padding: 10,
             beginAtZero:true,
             min: -90,
             max: 90,
@@ -171,9 +175,13 @@ function drawDiffractionChart() {
             display: true,
             labelString: 'Angle of Incidence, θ (deg)'
           },
+          gridLines: {
+            drawTicks: false,
+          },
           type: 'linear',
           position: 'bottom',
           ticks: {
+            padding: 10,
             min: 0,
             max: 90,
           }
@@ -300,7 +308,11 @@ function drawAngularDispersionChart() {
             display: true,
             labelString: 'Angular Dispersion, dθm/dλ (deg/nm)'
           },
+          gridLines: {
+            drawTicks: false,
+          },
           ticks: {
+            padding: 10,
             beginAtZero:true,
             min: angleLow,
             max: angleHigh
@@ -313,7 +325,11 @@ function drawAngularDispersionChart() {
           },
           type: 'linear',
           position: 'bottom',
+          gridLines: {
+            drawTicks: false,
+          },
           ticks: {
+            padding: 10,
             min: 0,
             max: 90,
           }
@@ -440,7 +456,11 @@ function drawPulseDispersionChart() {
             display: true,
             labelString: 'Temporal Dispersion (1/s)dτ/dλ (ps/nm per meter)'
           },
+          gridLines: {
+            drawTicks: false,
+          },
           ticks: {
+            padding: 10,
             beginAtZero:true,
             min: pulseLow,
             max: pulseHigh
@@ -453,7 +473,11 @@ function drawPulseDispersionChart() {
           },
           type: 'linear',
           position: 'bottom',
+          gridLines: {
+            drawTicks: false,
+          },
           ticks: {
+            padding: 10,
             min: 0,
             max: 90,
           }
